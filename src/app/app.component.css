@@ -1,0 +1,15 @@
+.navbar{
+  background-color: rgb(255,102,0);
+}
+.navbar-left li a {
+  color: black;
+  border-right: 1px solid black;
+}
+
+.navbar-right li a {
+  color: black;
+}
+
+.navbar-left li .nob {
+  border-right: none;
+}
