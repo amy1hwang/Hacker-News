@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Article } from './article.model';
 
 @Component({
@@ -7,5 +7,9 @@ import { Article } from './article.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+    filterByCategory: string = "all";
 
+    onClick(clickedCategory) {
+    this.filterByCategory = clickedCategory;
+    }
 }

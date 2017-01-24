@@ -1,0 +1,5 @@
+<ol>
+  <li *ngFor="let currentArticle of scienceArticleList | categoryPipe:filterByCategory">{{currentArticle.title}} {{currentArticle.link}}
+  <p>{{currentArticle.comments}}</p>
+</li>
+</ol>

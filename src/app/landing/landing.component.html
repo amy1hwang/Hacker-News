@@ -1,4 +1,23 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <ul class="nav navbar-nav navbar-left" >
+        <li><a class="navbar-brand nob" routerLink="">Hacker News</a></li>
+        <li><a value="all">All</a></li>
+        <li><a (click)="onClick($event.target.value)" value="science">Science</a></li>
+        <li><a routerLink="politics">Politics</a></li>
+        <li><a routerLink="global">Global</a></li>
+        <li><a routerLink="tech">Tech</a></li>
+        <li><a class="nob" routerLink="submit">submit</a></li>
+      </ul>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a routerLink="about">Login</a></li>
+    </ul>
+  </div>
+</nav>
 <app-article-list [childArticleList]="masterArticleList"></app-article-list>
+
 
 <!-- <script type="text/javascript">
   var showApp = angular.module('showApp', [])
