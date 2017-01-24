@@ -1,22 +1,25 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <ul class="nav navbar-nav navbar-left" >
-        <li><a class="navbar-brand nob" routerLink="">Hacker News</a></li>
-        <li><a value="all">All</a></li>
-        <li><a (click)="onClick($event.target.value)" value="science">Science</a></li>
-        <li><a routerLink="politics">Politics</a></li>
-        <li><a routerLink="global">Global</a></li>
-        <li><a routerLink="tech">Tech</a></li>
-        <li><a class="nob" routerLink="submit">submit</a></li>
-      </ul>
+        <select (change)="onChange($event.target.value)">
+         <option value="all" selected="selected">All Articles</option>
+         <option value="science">science</option>
+         <option value="tech">tech</option>
+         <option value="global">global</option>
+         <option value="politics">politics</option>
+        </select>
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li><a routerLink="about">Login</a></li>
     </ul>
   </div>
 </nav>
-<app-article-list [childArticleList]="masterArticleList"></app-article-list>
+<ol>
+  <li *ngFor="let currentArticle of masterArticleList | categoryPipe:filterByCategory">{{currentArticle.title}} {{currentArticle.link}}
+  <p>{{currentArticle.comments}}</p>
+</li>
+</ol>
+
 
 
 <!-- <script type="text/javascript">

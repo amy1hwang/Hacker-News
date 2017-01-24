@@ -19,7 +19,7 @@ export class LandingComponent {
 
   filterByCategory: string = "all";
 
-  onClick(optionFromMenu) {
+  onChange(optionFromMenu) {
   this.filterByCategory = optionFromMenu;
   }
 }
